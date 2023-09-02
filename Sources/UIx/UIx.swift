@@ -3,7 +3,6 @@
 import Foundation
 import UIKit
 import SwiftUI
-import LoadingView
 
 extension View {
     public func circleIndicatorWithSize(when binding: Binding<Bool>, lineWidth: CGFloat = 30, size: CGFloat, pathColor: Color, lineColor: Color, text: String) -> some View {
