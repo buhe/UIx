@@ -6,7 +6,7 @@ UI extension based on SwiftUI.
 ```swift
 
 import SwiftUI
-import LoadingView
+import UIx
 
 struct ExampleView: View {
     
@@ -40,6 +40,9 @@ struct ExampleView: View {
 <summary>TabBar</summary>
 
 ```swift
+import SwiftUI
+import UIx
+
 struct ContentView: View {
 
     var body: some View {
