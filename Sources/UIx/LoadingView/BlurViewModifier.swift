@@ -26,7 +26,6 @@ struct BlurViewModifier<TopView: View>: ViewModifier {
                 content
             } else {
 //                content.blur(radius: blurRadius)
-                content
                 destination
             }
         }
