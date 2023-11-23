@@ -30,9 +30,12 @@ extension View {
     ///   - binding: Defines if the view should be visible or not
     ///   - color: The color of dots
     /// - Returns:  A new  animated `DotsActivityView` `View` presented on top of blurred out `View`
-    public func dotsIndicator(when binding: Binding<Bool>, color: Color = .accentColor) -> some View {
+    public func dotsIndicator(when binding: Binding<Bool>, color: Color = .accentColor, text: String = "") -> some View {
         show(when: binding) {
-            DotsActivityView(color: color)
+            VStack {
+                DotsActivityView(color: color)
+                Text(text)
+            }
         }
     }
     
@@ -43,9 +46,12 @@ extension View {
     ///   - pathColor: The color of the path that holds animated view
     ///   - lineColor: The color of the view that is animated
     /// - Returns: A new animated `CircleActivityView` `View` presented on top of blurred out `View`
-    public func circleIndicator(when binding: Binding<Bool>, lineWidth: CGFloat = 30, pathColor: Color, lineColor: Color) -> some View {
+    public func circleIndicator(when binding: Binding<Bool>, lineWidth: CGFloat = 30, pathColor: Color, lineColor: Color, text: String = "") -> some View {
         show(when: binding) {
-            CircleActivityView(lineWidth: lineWidth, pathColor: pathColor, lineColor: lineColor)
+            VStack {
+                CircleActivityView(lineWidth: lineWidth, pathColor: pathColor, lineColor: lineColor)
+                Text(text)
+            }
         }
     }
     
