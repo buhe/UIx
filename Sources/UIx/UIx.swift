@@ -1,7 +1,6 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 import Foundation
-import UIKit
 import SwiftUI
 
 extension View {
@@ -16,13 +15,13 @@ extension View {
         }
     }
 }
-
+#if os(iOS)
 extension UIScreen {
     static var screenWidth: CGFloat {
         return main.bounds.width
     }
 }
-
+#endif
 extension Bundle {
     var releaseVersionNumber: String? {
         return infoDictionary?["CFBundleShortVersionString"] as? String
